@@ -84,7 +84,10 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .hero h1 em{font-style:normal;background:linear-gradient(transparent 62%,var(--yellow) 62%)}
 .hero p.lead{font-size:1.15rem;color:var(--ink-soft);margin:20px 0 28px;max-width:34rem}
 .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-.hero-art{filter:drop-shadow(0 18px 30px rgba(24,24,24,.18))}
+.hero-art{border-radius:var(--radius);box-shadow:0 18px 40px rgba(24,24,24,.22);width:100%;height:auto}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}
+.gallery img{border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--shadow);width:100%;height:100%;object-fit:cover}
+@media(max-width:760px){.gallery{grid-template-columns:1fr}}
 @media(max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-art{max-width:420px;margin:0 auto}}
 
 /* trust bar */
@@ -177,17 +180,7 @@ footer a{color:#c9c9c9}
         <a class="btn" href="#cennik">Pozrieť cenník</a>
       </div>
     </div>
-    <svg class="hero-art" viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustrácia žltej dodávky Peugeot Boxer">
-      <rect x="20" y="288" width="480" height="8" rx="4" fill="#dcd8cd"/>
-      <path d="M60 250 V120 q0-18 18-18 h250 l60 14 q60 14 66 40 l8 34 v60 q0 10-10 10 H70 q-10 0-10-10z" fill="#FFC400"/>
-      <path d="M328 116 l58 13 q52 12 58 36 l4 17 H388 l-14-66z" fill="#2a2a2a" opacity=".85"/>
-      <rect x="60" y="228" width="452" height="26" rx="6" fill="#2a2a2a"/>
-      <rect x="86" y="126" width="212" height="92" rx="8" fill="#e8af00" opacity=".35"/>
-      <circle cx="150" cy="264" r="34" fill="#181818"/><circle cx="150" cy="264" r="15" fill="#cfcfcf"/>
-      <circle cx="408" cy="264" r="34" fill="#181818"/><circle cx="408" cy="264" r="15" fill="#cfcfcf"/>
-      <rect x="474" y="196" width="26" height="18" rx="4" fill="#fff" opacity=".9"/>
-      <text x="122" y="182" font-family="Archivo,Arial" font-weight="900" font-size="30" fill="#181818">zltadodavka.sk</text>
-    </svg>
+    <img class="hero-art" src="foto/dodavka-predok.jpg" alt="Žltá dodávka Peugeot Boxer L3H2 na prenájom v Bratislave" width="668" height="648" fetchpriority="high">
   </div>
 </section>
 
@@ -271,7 +264,11 @@ footer a{color:#c9c9c9}
       <div class="spec"><b>1 200 kg</b><span>nosnosť</span></div>
       <div class="spec"><b>Diesel</b><span>2.0 BlueHDi, úsporný</span></div>
     </div>
-    <!-- FOTO: po dodaní fotiek sem príde galéria foto/dodavka-*.jpg -->
+    <div class="gallery">
+      <img src="foto/dodavka-zadok.jpg" alt="Peugeot Boxer zozadu – zadné dvere s otváraním 270°" loading="lazy">
+      <img src="foto/dodavka-zadok-2.jpg" alt="Žltá dodávka na prenájom – bočný a zadný pohľad" loading="lazy">
+      <img src="foto/dodavka-noc.jpg" alt="Peugeot Boxer 2.0 BlueHDi spredu" loading="lazy">
+    </div>
   </div>
 </section>
 
